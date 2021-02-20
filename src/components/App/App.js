@@ -5,6 +5,7 @@ import './App.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import GuestList from '../GuestList/GuestList';
+import DinnerSupplies from '../DinnerSupplies/DinnerSupplies';
 
 function App() {
   let [guestList, setGuestList] = useState([]);
@@ -147,7 +148,11 @@ function App() {
         </tbody>
       </table> */}
 
-      <h2>Dinner Supplies</h2>
+      {/* Dinner Supplies Prop */}
+      <DinnerSupplies 
+      guestList={guestList}
+      />
+      {/* <h2>Dinner Supplies</h2>
       <div>
         Spoons: {guestList.length * 2}
       </div>
@@ -158,7 +163,7 @@ function App() {
 
       <div>
         Knives: {guestList.length * 2}
-      </div>
+      </div> */}
 
       {/* This where the footer prop goes using the imported component */}
       <Footer />
