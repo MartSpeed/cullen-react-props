@@ -62,123 +62,26 @@ function App() {
     <div className="App">
       {/*** take this header and make this prop from the component*/}
       <Header />
-
       <h2>Party Leader</h2>
-
       {guestList[0] && <h3>{guestList[0].name}</h3>}
-
       <h2>Add a new guest</h2>
-
       <GuestForm
-    newGuestName={newGuestName}
-    setNewGuestName={setNewGuestName}
-    newGuestMeal={newGuestMeal}
-    setNewGuestMeal={setNewGuestMeal}
-    handleSubmit={handleSubmit}
-    />
-      {/* <form onSubmit={handleSubmit}>
-
-        <label>
-          Name
-        </label>
-
-        <input
-          type="text"
-          placeholder="Name"
-          value={newGuestName}
-          onChange={(evt) => setNewGuestName(evt.target.value)}
-        />
-
-        <div>
-          Would this guest like a kid's meal?
-
-          <div >
-
-            <div>
-
-              <label>
-
-                <input
-                  type="radio"
-                  value={true}
-                  checked={newGuestMeal === 'true'}
-                  name="kidsMeal"
-                  onChange={(evt) => setNewGuestMeal(evt.target.value)}
-                />
-                Yes, this guest would like a Kid's Meal
-              </label>
-
-            </div>
-
-            <div>
-
-              <label>
-                <input
-                  type="radio"
-                  value={false}
-                  checked={newGuestMeal === 'false'}
-                  name="kidsMeal"
-                  onChange={(evt) => setNewGuestMeal(evt.target.value)}
-                />
-                No, this guest would not like a Kid's Meal
-              </label>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <button type="submit">Add Guest</button>
-
-      </form> */}
-      
+        newGuestName={newGuestName}
+        setNewGuestName={setNewGuestName}
+        newGuestMeal={newGuestMeal}
+        setNewGuestMeal={setNewGuestMeal}
+        handleSubmit={handleSubmit}
+        />      
       {/* GuestList Prop */}
       <GuestList 
       guestList={guestList}
       />
-      {/* <h2>Guest List</h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Kid's Meal</th>
-          </tr>
-        </thead>
-        <tbody>
-          {guestList.map(guest => (
-            <tr key={guest.id}>
-              <td>{guest.name}</td>
-              <td>{String(guest.kidsMeal)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table> */}
-
       {/* Dinner Supplies Prop */}
       <DinnerSupplies 
       guestList={guestList}
       />
-      {/* <h2>Dinner Supplies</h2>
-      <div>
-        Spoons: {guestList.length * 2}
-      </div>
-
-      <div>
-        Forks: {guestList.length * 2}
-      </div>
-
-      <div>
-        Knives: {guestList.length * 2}
-      </div> */}
-
       {/* This where the footer prop goes using the imported component */}
       <Footer />
-      {/* <footer>
-        <h3>Have fun!</h3>
-        <p>Don't forget to mind your Ps and Qs!</p>
-      </footer> */}
     </div>
   );
 }
