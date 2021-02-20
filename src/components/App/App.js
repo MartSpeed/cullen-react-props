@@ -125,7 +125,9 @@ function App() {
       </form>
       
       {/* GuestList Prop */}
-      <GuestList />
+      <GuestList 
+      guestList={guestList}
+      />
       {/* <h2>Guest List</h2>
 
       <table>
