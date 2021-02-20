@@ -4,7 +4,31 @@
  */
 let spiderMan = true;
  function GuestList() {
-   console.log('GuestList function Test', spiderMan);
+  console.log('GuestList function Test', spiderMan);
+
+
+
+   // nothing will happen without the return
+   return (<>
+    <h2>Guest List</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Kid's Meal</th>
+        </tr>
+      </thead>
+      <tbody>
+        {guestList.map(guest => (
+          <tr key={guest.id}>
+            <td>{guest.name}</td>
+            <td>{String(guest.kidsMeal)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+   </>)
  }
 
  export default GuestList;

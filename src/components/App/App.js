@@ -126,7 +126,7 @@ function App() {
       
       {/* GuestList Prop */}
       <GuestList />
-      <h2>Guest List</h2>
+      {/* <h2>Guest List</h2>
 
       <table>
         <thead>
@@ -143,7 +143,7 @@ function App() {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> */}
 
       <h2>Dinner Supplies</h2>
       <div>
