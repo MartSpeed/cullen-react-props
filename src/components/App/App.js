@@ -3,7 +3,8 @@ import axios from 'axios';
 import './App.css';
 // COMPONENTS
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer'
+import Footer from '../Footer/Footer';
+import GuestList from '../GuestList/GuestList';
 
 function App() {
   let [guestList, setGuestList] = useState([]);
@@ -122,7 +123,9 @@ function App() {
         <button type="submit">Add Guest</button>
 
       </form>
-
+      
+      {/* GuestList Prop */}
+      <GuestList />
       <h2>Guest List</h2>
 
       <table>
@@ -154,6 +157,7 @@ function App() {
       <div>
         Knives: {guestList.length * 2}
       </div>
+
       {/* This where the footer prop goes using the imported component */}
       <Footer />
       {/* <footer>
